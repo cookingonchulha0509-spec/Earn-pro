@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#2457d6">
+<meta name="description" content="EarnPro - Discover tasks, explore opportunities and earn rewards.">
+<title>EarnPro — Turn Your Time Into Opportunity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--green:#2457d6;--green2:#3978f6;--dark:#101d3b;--text:#172544;--muted:#7582a0;--bg:#f7f9ff;--line:#e6ebf5}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'DM Sans',sans-serif;color:var(--text);background:#fff;overflow-x:hidden}a{text-decoration:none;color:inherit}button{font:inherit;cursor:pointer}.container{width:min(1160px,90%);margin:auto}
+.topbar{background:var(--dark);color:#cbd6f1;text-align:center;padding:10px 15px;font-size:12px}.topbar span{color:#9dbbff;font-weight:700}
+header{height:82px;display:flex;align-items:center;background:rgba(255,255,255,.94);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:100;backdrop-filter:blur(18px)}
+.nav{display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:11px}.brand img{width:43px;height:43px;object-fit:contain;border-radius:12px}.brand-name{font-family:Manrope;font-size:22px;font-weight:800;letter-spacing:-1px}.brand-name span{color:var(--green)}
+.navlinks{display:flex;align-items:center;gap:32px}.navlinks a{font-size:13px;font-weight:600;color:#596785;transition:.2s}.navlinks a:hover{color:var(--green)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 23px;border-radius:10px;background:var(--green);color:white!important;font-weight:700;font-size:13px;border:1px solid var(--green);transition:.25s}.btn:hover{background:#1d46b5;transform:translateY(-2px);box-shadow:0 9px 25px #2457d62c}.btn-outline{background:white;color:var(--dark)!important;border-color:#dce4f3}.btn-outline:hover{background:#f1f5ff;color:var(--green)!important}.header-download{padding:12px 18px;white-space:nowrap}.menu-btn{display:none;background:none;border:0;font-size:25px;color:var(--dark)}
+.hero{padding:100px 0 90px;background:radial-gradient(ellipse at 80% 30%,#e3edff 0%,transparent 38%),linear-gradient(120deg,#fff 40%,#f6f8ff);position:relative;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:65px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#edf3ff;color:#2457d6;border:1px solid #dce7ff;border-radius:30px;padding:8px 13px;font-size:11px;font-weight:800;letter-spacing:1px}.dot{width:7px;height:7px;background:#3978f6;border-radius:50%;box-shadow:0 0 0 4px #3978f61c}
+h1{font-family:Manrope,sans-serif;font-size:clamp(42px,5.5vw,69px);line-height:1.08;letter-spacing:-3.5px;margin:24px 0 22px;font-weight:800}h1 em{color:var(--green);font-style:normal}.hero-desc{font-size:16px;color:#667391;line-height:1.9;max-width:490px}.hero-actions{display:flex;gap:13px;margin-top:33px;flex-wrap:wrap}.hero-actions .btn{padding:16px 23px}.hero-note{font-size:11px;color:#8793ad;margin-top:19px}
+.hero-visual{position:relative;min-height:430px;display:flex;align-items:center;justify-content:center}.visual-card{background:white;border:1px solid #e5eaf4;border-radius:25px;padding:27px;width:min(390px,100%);box-shadow:0 30px 90px #1c347017;position:relative;z-index:2;transform:rotate(-2deg)}
+.vc-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px}.vc-title{font-size:13px;font-weight:800}.live{font-size:10px;color:var(--green);background:#edf3ff;padding:7px 10px;border-radius:20px;font-weight:700}.balance-label{font-size:12px;color:#8490aa}.balance{font-family:Manrope;font-size:30px;font-weight:800;margin-top:6px;letter-spacing:-1px}.balance small{font-size:13px;color:var(--green)}.vc-line{height:1px;background:#e9edf6;margin:23px 0}.vc-bottom{display:flex;justify-content:space-between;gap:10px}.vc-stat{font-size:10px;color:#8d98b0}.vc-stat b{display:block;color:#24365f;font-size:17px;margin-top:6px}.task-item{display:flex;align-items:center;gap:12px;margin-top:19px}.task-icon{width:39px;height:39px;border-radius:12px;background:#edf3ff;display:grid;place-items:center;color:var(--green);font-weight:800}.task-info{flex:1}.task-info b{font-size:12px;display:block}.task-info span{font-size:10px;color:#8490aa}.task-reward{font-size:12px;font-weight:800;color:var(--green)}.float-tag{position:absolute;z-index:3;background:white;padding:14px 17px;border-radius:13px;box-shadow:0 12px 35px #1c347017;font-size:11px;font-weight:700;animation:float 4s ease-in-out infinite}.tag-one{top:36px;right:0}.tag-two{bottom:35px;left:-8px;animation-delay:1s}@keyframes float{50%{transform:translateY(-10px)}}
+.section{padding:95px 0}.section-head{text-align:center;max-width:650px;margin:0 auto 48px}.kicker{font-size:11px;color:var(--green);font-weight:800;letter-spacing:2px;text-transform:uppercase}.section-head h2{font-family:Manrope;font-size:clamp(29px,4vw,43px);letter-spacing:-1.7px;margin:15px 0}.section-head p{font-size:14px;line-height:1.8;color:var(--muted)}
+.features,.faq{background:#f7f9ff}.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.feature-card{background:white;padding:29px;border:1px solid var(--line);border-radius:17px;transition:.3s}.feature-card:hover{transform:translateY(-6px);border-color:#c6d7ff;box-shadow:0 15px 40px #1c347010}.feature-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:13px;background:#edf3ff;color:var(--green);font-size:20px;margin-bottom:23px;font-weight:800}.feature-card h3{font-family:Manrope;font-size:17px;margin-bottom:11px}.feature-card p{font-size:12px;line-height:1.9;color:var(--muted)}
+.categories-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.category{padding:23px 17px;border:1px solid var(--line);border-radius:15px;background:white;transition:.25s}.category:hover{border-color:#b7ccff;background:#f8faff;transform:translateY(-4px)}.category-icon{font-size:23px;margin-bottom:17px}.category h3{font-size:14px;margin-bottom:7px}.category p{font-size:11px;color:var(--muted);line-height:1.6}
+.steps{background:var(--dark);color:white}.steps .section-head p{color:#b7c5e5}.steps .kicker{color:#a9c4ff}.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}.step{padding:28px;border:1px solid #2d4274;border-radius:17px;background:#17284f}.step-number{font-family:Manrope;font-size:38px;font-weight:800;color:#8fb1ff}.step h3{font-size:17px;margin:15px 0 10px}.step p{font-size:12px;color:#b7c5e5;line-height:1.8}
+.trust-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.trust-content h2{font-family:Manrope;font-size:39px;letter-spacing:-1.5px;margin:16px 0}.trust-content>p{color:var(--muted);font-size:13px;line-height:1.9}.trust-item{display:flex;gap:14px;margin-top:25px}.check{width:29px;height:29px;border-radius:50%;background:#eaf0ff;color:var(--green);display:grid;place-items:center;flex-shrink:0;font-weight:800}.trust-item b{font-size:13px}.trust-item p{font-size:11px;color:var(--muted);margin-top:5px;line-height:1.7}.trust-panel{background:#eef3ff;border-radius:22px;padding:36px;border:1px solid #dce6ff}.trust-panel h3{font-family:Manrope;font-size:22px;margin-bottom:12px}.trust-panel p{font-size:12px;color:#65749a;line-height:1.9}.trust-label{display:inline-block;background:#fff;border:1px solid #dce6ff;color:var(--green);padding:8px 12px;border-radius:7px;font-size:10px;font-weight:800;margin-bottom:22px}
+.faq-list{max-width:760px;margin:auto}.faq-item{background:white;border:1px solid var(--line);border-radius:12px;margin-bottom:11px;overflow:hidden}.faq-question{width:100%;padding:20px;background:white;border:0;text-align:left;display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:700;color:var(--text)}.faq-question span:last-child{font-size:20px;color:var(--green)}.faq-answer{max-height:0;overflow:hidden;transition:max-height .3s ease}.faq-answer p{padding:0 20px 20px;color:var(--muted);font-size:12px;line-height:1.9}.faq-item.active .faq-answer{max-height:200px}
+.download{padding:85px 0}.download-box{background:var(--dark);border-radius:25px;padding:65px 50px;color:white;text-align:center;position:relative;overflow:hidden}.download-box:before{content:"";position:absolute;width:350px;height:350px;border:1px solid #ffffff12;border-radius:50%;top:-180px;left:calc(50% - 175px);box-shadow:0 0 0 35px #ffffff08,0 0 0 75px #ffffff05}.download-box h2{font-family:Manrope;font-size:clamp(29px,4vw,44px);letter-spacing:-1.5px;position:relative}.download-box p{font-size:13px;color:#b7c5e5;margin:17px auto 27px;max-width:480px;line-height:1.8;position:relative}.download-box .btn{background:#3978f6;border-color:#3978f6;position:relative;padding:16px 27px}.download-caption{font-size:10px;color:#aab9db;margin-top:16px;position:relative}
+footer{background:#101d3b;color:white;padding:60px 0 25px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:45px}.footer-brand p{font-size:12px;color:#aab9db;line-height:1.9;max-width:270px;margin-top:17px}footer h4{font-size:12px;margin-bottom:20px}footer .footer-links{display:grid;gap:14px}footer .footer-links a{font-size:11px;color:#aab9db;transition:.2s}footer .footer-links a:hover{color:#a9c4ff}.copyright{border-top:1px solid #293b67;padding-top:22px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:10px;color:#9aabd2}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}.reveal.show{opacity:1;transform:translateY(0)}
+@media(max-width:850px){.hero-grid{gap:25px}.hero{padding:75px 0}.feature-grid{grid-template-columns:repeat(2,1fr)}.categories-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:repeat(2,1fr)}.trust-grid{gap:25px}}
+@media(max-width:650px){header{height:70px}.header-download{padding:10px 12px;font-size:11px;margin-left:auto;margin-right:13px;border-radius:9px}.menu-btn{display:block}.navlinks{display:none;position:absolute;top:69px;left:0;width:100%;background:white;padding:22px 5%;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:22px;box-shadow:0 15px 25px #00000008}.navlinks.open{display:flex}.brand-name{font-size:20px}.hero{padding:65px 0 60px}.hero-grid{grid-template-columns:1fr;gap:25px}h1{font-size:47px;letter-spacing:-2.5px}.hero-desc{font-size:14px}.hero-visual{min-height:370px}.visual-card{max-width:350px;padding:23px}.tag-one{right:-2px}.tag-two{left:0}.section{padding:70px 0}.section-head{margin-bottom:33px}.feature-grid{grid-template-columns:1fr;gap:13px}.feature-card{padding:23px}.categories-grid{gap:11px}.category{padding:17px 13px}.steps-grid{grid-template-columns:1fr;gap:13px}.trust-grid{grid-template-columns:1fr}.trust-content h2{font-size:32px}.trust-panel{padding:27px}.download{padding:60px 0}.download-box{padding:50px 22px}.footer-grid{grid-template-columns:1fr 1fr;gap:30px 20px}.copyright{line-height:1.8}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="topbar">Discover opportunities. Complete tasks. <span>Move forward with EarnPro.</span></div>
+<header><div class="container nav">
+<a href="#" class="brand"><img src="logo.png" alt="EarnPro Logo"><div class="brand-name">Earn<span>Pro</span></div></a>
+<nav class="navlinks" id="navLinks"><a href="#features">Features</a><a href="#categories">Categories</a><a href="#how">How It Works</a><a href="#faq">FAQs</a></nav>
+<a href="#" class="btn header-download download-link">↓ &nbsp; Download App</a>
+<button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button>
+</div></header>
+<main>
+<section class="hero"><div class="container hero-grid">
+<div class="reveal"><div class="eyebrow"><span class="dot"></span> YOUR OPPORTUNITY STARTS HERE</div><h1>Make your time<br>more <em>valuable.</em></h1><p class="hero-desc">Discover exciting tasks, explore different opportunities and earn rewards through EarnPro. A smarter way to turn your everyday time into something productive.</p><div class="hero-actions"><a href="#download" class="btn">Explore EarnPro ↗</a><a href="#how" class="btn btn-outline">How it works →</a></div><div class="hero-note">Simple experience · Multiple task categories · One platform</div></div>
+<div class="hero-visual reveal"><div class="float-tag tag-one">✦ Discover new tasks</div><div class="visual-card"><div class="vc-top"><div class="vc-title">Your EarnPro Experience</div><div class="live">● ACTIVE</div></div><div class="balance-label">Your wallet</div><div class="balance">₹ <small>Manage your rewards</small></div><div class="vc-line"></div><div class="vc-bottom"><div class="vc-stat">Task discovery<b>Explore</b></div><div class="vc-stat">Opportunities<b>Multiple</b></div><div class="vc-stat">Experience<b>Simple</b></div></div><div class="vc-line"></div><div class="task-item"><div class="task-icon">A</div><div class="task-info"><b>Explore app tasks</b><span>Discover opportunities</span></div><div class="task-reward">Explore ↗</div></div><div class="task-item"><div class="task-icon">G</div><div class="task-info"><b>Gaming activities</b><span>Find your interests</span></div><div class="task-reward">Explore ↗</div></div><div class="task-item"><div class="task-icon">S</div><div class="task-info"><b>Special opportunities</b><span>Discover more</span></div><div class="task-reward">Explore ↗</div></div></div><div class="float-tag tag-two">✓ Built around simplicity</div></div>
+</div></section>
+<section class="section features" id="features"><div class="container"><div class="section-head reveal"><div class="kicker">THE EARNPRO EXPERIENCE</div><h2>Everything you need.<br>One simple platform.</h2><p>Explore a thoughtfully designed experience that makes discovering and completing tasks straightforward.</p></div><div class="feature-grid">
+<div class="feature-card reveal"><div class="feature-icon">✦</div><h3>Discover Tasks</h3><p>Explore available opportunities and find activities that match your interests and preferences.</p></div>
+<div class="feature-card reveal"><div class="feature-icon">◈</div><h3>Multiple Categories</h3><p>From gaming to app discovery, explore different types of tasks in one place.</p></div>
+<div class="feature-card reveal"><div class="feature-icon">₹</div><h3>Rewards & Wallet</h3><p>Keep track of your available rewards and wallet activity through your account.</p></div>
+<div class="feature-card reveal"><div class="feature-icon">↗</div><h3>Simple Experience</h3><p>Navigate the platform with a straightforward interface designed for everyday use.</p></div>
+<div class="feature-card reveal"><div class="feature-icon">◎</div><h3>Personalised Discovery</h3><p>Discover relevant opportunities based on your activity and task preferences.</p></div>
+<div class="feature-card reveal"><div class="feature-icon">◉</div><h3>Account Management</h3><p>Access your profile, track activity and manage your account from one place.</p></div>
+</div></div></section>
+<section class="section" id="categories"><div class="container"><div class="section-head reveal"><div class="kicker">EXPLORE OPPORTUNITIES</div><h2>Find what interests you.</h2><p>Different activities. Different opportunities. Choose what works for you.</p></div><div class="categories-grid">
+<div class="category reveal"><div class="category-icon">🎮</div><h3>Gaming Tasks</h3><p>Discover gaming-related activities and challenges.</p></div>
+<div class="category reveal"><div class="category-icon">📱</div><h3>App Discovery</h3><p>Explore apps and complete eligible activities.</p></div>
+<div class="category reveal"><div class="category-icon">📋</div><h3>Surveys & Tasks</h3><p>Participate in available surveys and task opportunities.</p></div>
+<div class="category reveal"><div class="category-icon">🌐</div><h3>Online Activities</h3><p>Explore various digital opportunities.</p></div>
+</div></div></section>
+<section class="section steps" id="how"><div class="container"><div class="section-head reveal"><div class="kicker">GETTING STARTED</div><h2>A simple journey to begin.</h2><p>Getting started with EarnPro is designed to be straightforward.</p></div><div class="steps-grid">
+<div class="step reveal"><div class="step-number">01</div><h3>Download EarnPro</h3><p>Get the official EarnPro application and install it on your Android device.</p></div>
+<div class="step reveal"><div class="step-number">02</div><h3>Create Your Account</h3><p>Register or sign in and explore the features available inside the application.</p></div>
+<div class="step reveal"><div class="step-number">03</div><h3>Explore & Complete</h3><p>Choose available tasks, follow their requirements and check your eligible rewards.</p></div>
+</div></div></section>
+<section class="section"><div class="container trust-grid"><div class="trust-content reveal"><div class="kicker">DESIGNED FOR USERS</div><h2>A better way to experience task discovery.</h2><p>EarnPro focuses on making your everyday experience convenient, organised and easy to understand.</p>
+<div class="trust-item"><div class="check">✓</div><div><b>Clear task information</b><p>Understand the requirements before starting an activity.</p></div></div>
+<div class="trust-item"><div class="check">✓</div><div><b>Activity visibility</b><p>Keep an eye on your task activity and available account information.</p></div></div>
+<div class="trust-item"><div class="check">✓</div><div><b>Convenient access</b><p>Explore features and manage your account from one application.</p></div></div></div>
+<div class="trust-panel reveal"><div class="trust-label">THE EARNPRO APPROACH</div><h3>Built around a better user experience.</h3><p>We believe that discovering opportunities should feel simple. EarnPro brings task discovery, account activity and reward information together in one organised experience.</p><div style="height:1px;background:#dce6ff;margin:25px 0"></div><p><b style="color:#2457d6">Our focus</b><br>Clarity. Convenience. Consistency.</p></div></div></section>
+<section class="section faq" id="faq"><div class="container"><div class="section-head reveal"><div class="kicker">NEED TO KNOW</div><h2>Frequently asked questions.</h2><p>Some useful information before you get started.</p></div><div class="faq-list">
+<div class="faq-item"><button class="faq-question">What is EarnPro? <span>+</span></button><div class="faq-answer"><p>EarnPro is a task-based platform where users can discover available activities, complete eligible tasks and manage rewards through their account.</p></div></div>
+<div class="faq-item"><button class="faq-question">How do I get started? <span>+</span></button><div class="faq-answer"><p>Download the application, create an account and explore the tasks available inside EarnPro.</p></div></div>
+<div class="faq-item"><button class="faq-question">Are all tasks available to everyone? <span>+</span></button><div class="faq-answer"><p>Task availability may vary depending on eligibility, campaign requirements, account status and other conditions.</p></div></div>
+<div class="faq-item"><button class="faq-question">How do rewards work? <span>+</span></button><div class="faq-answer"><p>Eligible rewards are credited according to the specific task requirements and verification process. Check the application for applicable conditions.</p></div></div>
+<div class="faq-item"><button class="faq-question">Where can I download EarnPro? <span>+</span></button><div class="faq-answer"><p>Use the official download button on this website to access the application.</p></div></div>
+</div></div></section>
+<section class="download" id="download"><div class="container"><div class="download-box reveal"><h2>Your next opportunity<br>starts with EarnPro.</h2><p>Download the application, explore available tasks and discover a more organised way to manage your activities.</p><a href="#" class="btn download-link">↓ &nbsp; Download EarnPro</a><div class="download-caption">Official application download · Android</div></div></div></section>
+</main>
+<footer><div class="container"><div class="footer-grid">
+<div class="footer-brand"><a href="#" class="brand"><img src="logo.png" alt="EarnPro"><div class="brand-name" style="color:white">Earn<span>Pro</span></div></a><p>Discover opportunities, explore activities and manage your rewards with EarnPro.</p></div>
+<div><h4>Explore</h4><div class="footer-links"><a href="#features">Features</a><a href="#categories">Categories</a><a href="#how">How it works</a><a href="#download">Download App</a></div></div>
+<div><h4>Information</h4><div class="footer-links"><a href="#" id="privacyLink">Privacy Policy</a><a href="#" id="termsLink">Terms & Conditions</a></div></div>
+<div><h4>Support</h4><div class="footer-links"><a href="mailto:support@earnpro.app">Email Support</a><a href="#faq">Help Centre</a></div></div>
+</div><div class="copyright"><span>© <span id="year"></span> EarnPro. All rights reserved.</span><span>Made for a better digital experience.</span></div></div></footer>
+<script>
+/* EDIT THIS URL TO SET YOUR OWN APK DOWNLOAD LINK */
+const APP_DOWNLOAD_URL = "https://YOUR-CUSTOM-DOWNLOAD-LINK-HERE.com";
+const PRIVACY_POLICY_URL = "";
+const TERMS_URL = "";
+document.querySelectorAll(".download-link").forEach(link=>{
+ link.href=APP_DOWNLOAD_URL;
+ link.target="_blank";
+ link.rel="noopener noreferrer";
+ link.addEventListener("click",e=>{
+  if(APP_DOWNLOAD_URL.includes("YOUR-CUSTOM")){e.preventDefault();alert("Please add your APK download link in the website configuration.");}
+ });
+});
+document.getElementById("privacyLink").href=PRIVACY_POLICY_URL||"#";
+document.getElementById("termsLink").href=TERMS_URL||"#";
+document.getElementById("year").textContent=new Date().getFullYear();
+const menuBtn=document.getElementById("menuBtn"),navLinks=document.getElementById("navLinks");
+menuBtn.addEventListener("click",()=>{navLinks.classList.toggle("open");menuBtn.textContent=navLinks.classList.contains("open")?"×":"☰";});
+navLinks.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{navLinks.classList.remove("open");menuBtn.textContent="☰";}));
+document.querySelectorAll(".faq-question").forEach(btn=>btn.addEventListener("click",()=>{
+ const item=btn.parentElement,wasActive=item.classList.contains("active");
+ document.querySelectorAll(".faq-item").forEach(el=>{el.classList.remove("active");el.querySelector(".faq-question span:last-child").textContent="+";});
+ if(!wasActive){item.classList.add("active");btn.querySelector("span:last-child").textContent="−";}
+}));
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("show");observer.unobserve(entry.target);}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
